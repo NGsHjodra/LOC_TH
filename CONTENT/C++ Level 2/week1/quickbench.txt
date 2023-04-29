@@ -1,0 +1,15 @@
+static void benchreassign(benchmark::State& state) {
+  for (auto _ : state) {
+    int a = 0;
+    a = 1;
+  }
+}
+BENCHMARK(benchreassign);
+
+static void benchinit(benchmark::State& state) {
+  for (auto _ : state) {
+    int a = 1234;
+    int b = 293;
+  }
+}
+BENCHMARK(benchinit);
